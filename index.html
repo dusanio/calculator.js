@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-pink-200">
+    <div>
+      <h1 class="text-center text-red-500 text-5xl font-bold mt-5">
+        Calculator
+      </h1>
+      <p class="text-center text-pink-400 text-2xl font-bold italic">
+        Made using JavaScript
+      </p>
+      <p class="text-center text-pink-400 text-md font-bold italic">
+        by GoldenNinja
+      </p>
+    </div>
+    <div class="bg-white w-[500px] h-[650px] rounded-2xl ml-auto mr-auto mt-5">
+      <div class="flex justify-center items-center">
+        <div
+          id="display"
+          class="bg-orange-200 mt-5 text-left text-5xl pt-6 pl-4 w-[400px] h-[120px] rounded-2xl border-2 border-red-500 outline-none"
+        ></div>
+      </div>
+      <div class="flex justify-center items-center mt-8">
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">AC</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">%</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">/</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">←</span>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-8">
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">7</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">8</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">9</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">*</span>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-8">
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">4</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">5</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">6</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">-</span>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-8">
+        <div
+          onclick="displayOne()"
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">1</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">2</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">3</span>
+        </div>
+        <div
+          onclick="displayPlus()"
+          class="w-20 h-16 bg-red-100 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">+</span>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-8">
+        <div
+          onclick="displayZero()"
+          class="w-[185px] h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-left ml-8 mt-[12px]">0</span>
+        </div>
+        <div
+          class="w-20 h-16 bg-red-100 mr-6 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">.</span>
+        </div>
+        <div
+          onclick="calculateResult()"
+          class="w-20 h-16 bg-red-100 rounded-2xl outline-none border-2 border-black hover:border-red-500 hover:border-4 cursor-pointer"
+        >
+          <span class="text-2xl flex justify-center mt-[12px]">=</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
