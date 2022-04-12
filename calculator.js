@@ -1,16 +1,21 @@
-const display = document.querySelector("#display");
-const zero = parseInt("0");
-const one = parseInt("1");
-const plus = "+";
+let display = document.querySelector("#display");
+let numbers = Array.from(document.querySelectorAll("button"));
 
-const displayZero = () => {
-  display.textContent = zero;
-};
-
-const displayOne = () => {
-  display.textContent += one;
-};
-
-const displayPlus = () => {
-  display.textContent += plus;
-};
+numbers.map((button) => {
+  button.addEventListener("click", (event) => {
+    switch (event.target.innerText) {
+      case "AC":
+        display.innerText = "";
+        break;
+      case "←":
+        if (display.innerText) {
+          display.innerText = display.innerText.slice(0, -1);
+        }
+      case "=":
+        display.innerText = eval(display.innerText);
+        break;
+      default:
+        display.innerText += event.target.innerText;
+    }
+  });
+});
