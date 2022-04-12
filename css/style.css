@@ -516,6 +516,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 4rem;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[90px\] {
+  height: 90px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-\[12px\] {
+  height: 12px;
+}
+
+.h-\[550px\] {
+  height: 550px;
+}
+
 .w-\[500px\] {
   width: 500px;
 }
@@ -530,6 +554,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[185px\] {
   width: 185px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.w-\[155px\] {
+  width: 155px;
 }
 
 .cursor-pointer {
@@ -793,7 +837,27 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 650px;
   }
 
+  .lg\:h-\[120px\] {
+    height: 120px;
+  }
+
+  .lg\:h-16 {
+    height: 4rem;
+  }
+
   .lg\:w-\[500px\] {
     width: 500px;
+  }
+
+  .lg\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .lg\:w-20 {
+    width: 5rem;
+  }
+
+  .lg\:w-\[185px\] {
+    width: 185px;
   }
 }
