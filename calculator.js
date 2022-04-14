@@ -1,27 +1,40 @@
-let display = document.querySelector("#display");
-let numbers = Array.from(document.querySelectorAll("button"));
+function calculator() {
+  display.innerText = "0";
+  let buttons = document.querySelectorAll("button");
+  for (let i = 0; i < buttons.length; ++i) {
+    buttons[i].addEventListener("click", () =>
+      buttonPressed(buttons[i].innerText)
+    );
+  }
+}
 
-numbers.map((button) => {
-  button.addEventListener("click", (event) => {
-    switch (event.target.innerText) {
-      case "AC":
-        display.innerText = "";
-        break;
-      case "←":
-        if (display.innerText) {
-          display.innerText = display.innerText.slice(0, -1);
+function buttonPressed(b) {
+  switch (b) {
+    case "=":
+      try {
+        if (eval(display.innerText == "/")) {
+          display.innerText = "Invalid input";
         }
+        display.innerText = eval(display.innerText);
+      } catch {
+        display.innerText = "Invalid Input";
+      }
+      break;
+    case "←":
+      if (isNaN(display.innerText) == true) {
+        display.innerText = "0";
+      } else if (display.innerText == "0") {
         break;
-      case "=":
-        try {
-          display.innerText = eval(display.innerText);
-        } catch {
-          display.innerText = "Invalid input, try again";
-          return;
-        }
-        break;
-      default:
-        display.innerText += event.target.innerText;
-    }
-  });
-});
+      } else {
+        display.innerText = display.innerText.substring(0, -1);
+      }
+      break;
+    case "AC":
+      display.innerText = "0";
+      break;
+    default:
+      if (display.innerText == "0") display.innerText = "";
+      console.log("Pressed button " + b);
+      display.innerText += b;
+  }
+}
